@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="panel with-nav-tabs panel-primary">
+            <div class="panel-body">
+         <form ngNativeValidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="col-md-6">
+            <h2 style="color: blue">Track Details!</h2>
+           <div class="form-group">
+            <label for="name">Track Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    [ngModel]="track?.name"
+                    class="form-control"
+                    required>
+        </div>
+        <div class="form-group">
+            <label for="id">Track Number</label>
+                <input
+                        type="number"
+                        name="id"
+                        id="id"
+                        [ngModel]="track?.id"
+                        class="form-control"
+                        required>
+            </div>
+        <button class="btn btn-info" type="submit">Submit</button>
+        <button type="button" class="btn btn-danger" (click)="onClear(f)">Clear</button>
+        <hr>
+            <div class="form-group">
+                <label for="track">Available Tracks</label>
+                <select  class="form-control" id="track">
+                    <option *ngFor="let track of tracks" [value]="track">{{track.name}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="trackid">Available Track Number</label>
+                <select  class="form-control" id="trackid">
+                    <option *ngFor="let track of tracks" [value]="track">{{track.id}}</option>
+                </select>
+            </div>
+             </div>
+             <div class="col-md-6">
+                 <app-track-edit style="margin-top:10px;"
+                                 [track]="track"
+                                 *ngFor="let track of tracks"></app-track-edit>
+             </div>
+          </form>
+         </div>
+        </div>
+    </div>
+</div>

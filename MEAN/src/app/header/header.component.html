@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #337ab7;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="logo" target="_blank" href="http://www.cisco.com/">Cisco.com Worldwide Home</a>
+      <a class="navbar-brand visible-xs hidden-sm visible-lg" href="#">IT Partner Analytics</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+              <li routerLinkActive="active"><a [routerLink]="['/summary']">Summary</a></li>
+              <li routerLinkActive="active"><a [routerLink]="['/sowanalysis']">SOW Analysis</a></li>
+              <li routerLinkActive="active"><a [routerLink]="['/spendanalysis']">Spend Analysis</a></li>
+              <li routerLinkActive="active"><a [routerLink]="['/headcountanalysis']">Headcount Analysis</a></li>
+      </ul>
+      <!--<ul class="nav navbar-nav navbar-right" *ngIf = "router.url === '/summary/quarterly' || router.url === '/summary/monthly' || router.url === '/summary/monthlysow' || router.url === '/summary/quarterlysow'" style="margin-right: 0px;">-->
+      <ul class="nav navbar-nav navbar-right" *ngIf = "router.url === '/summary'" style="margin-right: 0px;">
+        <li class="hidden-xs hidden-sm" style="margin-top:10px">
+          <select (change)="onSelect($event.target.value)">
+            <option *ngFor="let country of countryData" [value]="country">{{country}}</option>
+          </select>
+        </li>
+        <li class="hidden-xs hidden-sm" style="margin: 10px 0 0 10px">
+          <select class="selectpicker headerSelect" data-width="80px">
+            <option>2017</option>
+          </select>
+        </li>
+        <li class="hidden-xs hidden-sm" style="margin: 10px 10px 0 10px">
+          <select (change)="onSelect($event.target.value)">
+            <option *ngFor="let dscription of descriptionData" [value]="dscription">{{dscription}}</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+</nav>

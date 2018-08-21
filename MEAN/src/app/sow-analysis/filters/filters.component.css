@@ -1,0 +1,12 @@
+h5{
+  font-size:13px;
+}
+
+select{
+  color: black;
+  border-bottom-left-radius: inherit;
+  border-radius: 100px;
+  width: 100px;
+  height: 30px;
+}
+

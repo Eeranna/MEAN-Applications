@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="panel with-nav-tabs panel-primary">
+        <div class="panel-body">
+<article class="panel panel-default" [ngStyle]="{backgroundColor: color}" (mouseenter)="color ='lightblue'">
+    <div class="panel-body">
+        {{ message.content }}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            {{ message.username }}
+        </div>
+        <div class="config" *ngIf="belongsToUser()">
+            <a (click)="onEdit()">Edit</a>
+            <a (click)="onDelete()">Delete</a>
+        </div>
+    </footer>
+</article>
+        </div>
+    </div>
+</div>

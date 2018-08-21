@@ -1,0 +1,21 @@
+<div class="row">
+<div class="panel with-nav-tabs panel-primary">
+        <div class="panel-body">
+    <h3 style="color: blue">Message Data!</h3>
+    <form ngNativeValidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input
+                    type="text"
+                    id="content"
+                    class="form-control"
+                    [ngModel]="message?.content"
+                    name="content"
+                    required>
+        </div>
+        <button class="btn btn-info" type="submit">Save</button>
+        <button type="button" class="btn btn-danger" (click)="onClear(f)">Clear</button>
+    </form>
+        </div>
+</div>
+</div>

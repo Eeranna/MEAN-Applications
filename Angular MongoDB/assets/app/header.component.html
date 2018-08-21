@@ -1,0 +1,66 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-header" style="margin-top:20px">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <button (click)="toggleMenu()" class="hamburger">
+      <span>toggle menu</span>
+    </button>
+    <app-menu [@slideInOut]="menuState"></app-menu>
+
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar" style="margin-top:30px">
+    <ul class="nav navbar-nav">
+        <a class="navbar-brand" id="logo" target="_blank" href="http://www.cisco.com/" style="margin-top:15px"><h4>Cisco.com Worldwide Home</h4></a>
+        <li routerLinkActive="active"><a [routerLink]="['/home']"><h5>Business Flow</h5></a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/auth']"><h5>Authentication</h5></a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/messages']"><h5>Content</h5></a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/topics']"><h5>Topics</h5></a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/create']"><h5>NewTopic</h5></a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/tracks']"><h5>Tracks Details</h5></a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/company']"><h5>Scheduler Details</h5></a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/tech']"><h5>Technologies</h5></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="hidden-xs hidden-sm" style="margin-top:20px">
+        <select class="selectpicker headerSelect" data-width="80px">
+          <option *ngFor="let country of countries" [value]="country">{{country.year}}</option>
+        </select>
+      </li>
+      <li class="hidden-xs hidden-sm" style="margin-top:20px">
+        <select>
+          <option *ngFor="let country of countries" [value]="country">{{country.name}}</option>
+        </select>
+      </li>
+      <li class="dropdown" style="margin-top:10px"><a class="dropdown-toggle setting-icon" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/assets/icon/feedback.png" width="32" height="21" alt=""/></a>
+        <ul class="dropdown-menu">
+          <li><a>Edit Dashbord</a></li>
+          <li><a>Edit Alert</a></li>
+          <li><a>Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a>Edit Bot</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <!--<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../assets/img/user-photo-thumb-1.png"></a>-->
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <div class="cui">
+					<span class="badge-wrapper base-margin-right">
+						<img class="thumb thumb--small thumb--bordered" src="/assets/img/user-photo-thumb-1.png" style="max-width: 40%">
+						<span class="badge badge--tiny badge--danger badge--bordered-alt">3</span>
+					</span>
+          </div>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a>Edit Profile</a></li>
+          <li><a>Change Password</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a style="cursor: pointer" (click)="onLogout()">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

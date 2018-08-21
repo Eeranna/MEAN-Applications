@@ -1,0 +1,80 @@
+<div class="panel panel-primary" style="margin-top:50px">
+  <div class="panel-heading">
+    <h5>Filters</h5>
+  </div>
+  <div class="panel-body" style="padding-left:0">
+    <div class="col-xs-12 col-lg-12">
+      <h5>Currency : </h5>
+      <select  (change)="onSelect($event.target.value)">
+        <option *ngFor="let country of countryData" value="{{country}}">{{country}} </option>
+      </select>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h5>Supervisor Level 2 : </h5>
+      <select class="selectpicker" data-width="130px" style="width:100px;">
+        <option>All</option>
+        <option>Jacoby Rebecca J</option>
+      </select>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h5>Supervisor Level 3 : </h5>
+      <select class="selectpicker" data-width="130px" style="width:100px;">
+        <option>All</option>
+        <option>Diaz Guillermo</option>
+      </select>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h5>Supervisor Level 4 : </h5>
+      <select class="selectpicker" id="supervisor4" data-width="130px" style="width:100px;">
+        <option>All</option>
+        <option>Gopalratnam Venbakm</option>
+        <option>Shanthi Iyer</option>
+        <option>John Manvile</option>
+        <option>Ravi Shankar</option>
+        <option>Bailey Szeto</option>
+        <option>Thirumala Sheshadri</option>
+        <option>Tullis Eleanor Mary</option>
+      </select>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h5>Supervisor Level 5 : </h5>
+      <select class="selectpicker" id="supervisor5" data-width="130px" style="width:100px;">
+        <option>All</option>
+        <option>Desiraju,Uma R</option>
+        <option>Liem,Stephen A</option>
+        <option>Perry,Robert Lance L</option>
+        <option>Prabhakaran,Kothandaraman</option>
+        <option>Rivera,Ileana</option>
+        <option>Smith,Steven T</option>
+      </select>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h5>SOW Status : </h5>
+      <select class="selectpicker" id="sowStatus" data-width="130px" style="width:100px;">
+        <option>All</option>
+        <option>Approved</option>
+        <option>Closed</option>
+        <option disabled>Draft</option>
+        <option disabled>Pending Response</option>
+        <option disabled>Response Pending Approval</option>
+        <option disabled>Response Rejected</option>
+      </select>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h5>Timeline : </h5>
+      <select class="selectpicker" data-width="130px" style="width:100px;">
+        <option>Q3 2017</option>
+      </select>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h5>SOW Category:</h5>
+      <select class="selectpicker" id="categorySOW" data-width="130px" style="width:100px;">
+        <option>All</option>
+        <option>Manage Project</option>
+        <option>Manage Services</option>
+        <option>Other Services (Not Common)</option>
+      </select>
+    </div>
+  </div>
+</div>
+

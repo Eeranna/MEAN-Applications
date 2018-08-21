@@ -1,0 +1,13 @@
+<div class="panel with-nav-tabs panel-primary">
+  <div class="panel-heading" style="background-color: #049fd9">
+    <h5>Total SOW - <span class="badge"><span class="totalSpend">$ 133,973,686.4</span></span>
+    </h5>
+  </div>
+  <div class="panel-body">
+    <ul class="nav nav-tabs">
+      <li class=""><a (click)="monthlySow()" data-toggle="tab" class="btn btn-success btn-group-sm"><i class="glyphicon glyphicon-calendar"></i>&nbsp;Monthly</a></li>
+      <li class="active"><a (click)="quarterlySow()" data-toggle="tab" class="btn btn-success btn-group-sm"><i class="glyphicon glyphicon-signal"></i>&nbsp;Quarterly</a></li>
+    </ul>
+    <div id="totalsowchart"></div>
+  </div>
+</div>

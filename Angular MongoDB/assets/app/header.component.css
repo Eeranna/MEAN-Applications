@@ -1,0 +1,211 @@
+@media (min-width:1025px) {
+  .biggerPanelLegend {
+    margin-left: 335px !important;
+  }
+  .chart-legend {
+    margin-left: 35px !important;
+  }
+}
+
+.dataTables_length {
+  margin: 8px 8px 0 35px
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+.buttonsRightAllign {
+  position: absolute;
+  z-index: 100;
+  top: 50px;
+  right: 15px;
+}
+
+#world-map {
+  width: 100%;
+  height: 230px;
+}
+
+#details *,
+#details2 *,
+#details3 *,
+#details4 *,
+#details5 * {
+  font-size: 12px;
+}
+
+nav li {
+  text-align: center
+}
+
+.glyphicon-chevron-up,
+.glyphicon-chevron-down {
+  color: #fff
+}
+
+*:focus {
+  outline: none;
+}
+
+table.dataTable tr th.select-checkbox {
+  display: block;
+  position: absolute;
+  top: 54px;
+  width: 12px !important;
+  height: 12px;
+  box-sizing: border-box;
+  padding: 0;
+  left: 16px;
+  content: ' ';
+  margin-top: -6px;
+  margin-left: -6px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+table.dataTable tr th.select-checkbox.selected::before {
+  display: block;
+  position: absolute;
+  top: 1.2em;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+}
+
+table.dataTable tr th.select-checkbox.selected::after {
+  top: -7px;
+  position: relative;
+  content: '\2713';
+  margin-top: -11px;
+  margin-left: 3px;
+  text-align: center;
+}
+
+.chart-legend li {
+  float: left;
+  list-style-type: none;
+  font-size: 12px
+}
+
+.chart-legend li span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+.glyphicon-cog,
+.glyphicon-user {
+  font-size: 14px;
+  top: 5px;
+}
+
+.glyphicon-search {
+  color: #039be5;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+  background-color: #fff;
+  color: #039be5;
+  font-size: 14px
+}
+
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+  background-color: #049fd9;
+}
+
+.navbar-inverse {
+  background-color: #049fd9;
+  border-color: #fff;
+  color: #fff
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+  font-size: 14px
+}
+
+#logo {
+  font-size: 0;
+  color: transparent!important;
+  background-repeat: no-repeat;
+  background-position: -8px -1660px;
+  width: 110px;
+  background-image: url(../../assets/app/images/mb-sprite.png);
+  margin-left: 0;
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+  border-radius: 0
+}
+
+.panel-heading {
+  padding: 5px 15px;
+  color: #039be5;
+}
+select{
+  color:black;
+  border-bottom-left-radius: inherit;
+  border-radius: 100px;
+  width: 126px;
+  height: 30px;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  height: 76px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: 0;
+}
+
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 18px;
+  right: 18px;
+  height: 6px;
+  background: #ffffff;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #ffffff;
+  content: "";
+}
+
+.hamburger span::before {
+  top: -10px;
+}
+
+.hamburger span::after {
+  bottom: -10px;
+}
+
+
